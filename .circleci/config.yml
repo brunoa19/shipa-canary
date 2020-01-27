@@ -16,7 +16,7 @@ jobs: # A basic unit of work in a run
             sudo pip install shipa-ci
       - run:
           command: |
-            sudo shipa-ci --app=canary --server=http://130.211.228.189:8080 --email=admin@shipa.io --password=shipa2020 --verbose
+            sudo shipa-ci --app=canary --server=http://130.211.228.189:8080 --email=admin@shipa.io --password=shipa2020
       - store_test_results: # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
           path: test-results
       - store_artifacts: # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
