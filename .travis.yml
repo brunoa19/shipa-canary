@@ -1,0 +1,8 @@
+language: python
+python:
+  - "2.7"
+
+jobs:
+  include:
+    - stage: deploy
+      script: 'pip install shipa-ci && shipa-ci --app=canary --server=$SHIPASERVER --email=$SHIPAEMAIL --password=$SHIPAPASSWORD --verbose'
