@@ -7,7 +7,6 @@ before_script:
 script:
     - go test -v
     - go build
-after_success:
     - pip install shipa-ci && shipa-ci --app=canary --server=$SHIPASERVER --email=$SHIPAEMAIL --password=$SHIPAPASSWORD --verbose
 env:
     global:
