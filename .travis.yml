@@ -7,7 +7,7 @@ before_script:
 script:
     - go test -v
     - go build
-    - pip install shipa-ci && shipa-ci --app=canary --server=$SHIPASERVER --email=$SHIPAEMAIL --password=$SHIPAPASSWORD --verbose
+    - sudo pip install shipa-ci && shipa-ci --app=canary --server=$SHIPASERVER --email=$SHIPAEMAIL --password=$SHIPAPASSWORD --verbose
 env:
     global:
 notifications:
