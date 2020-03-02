@@ -5,7 +5,7 @@ before_script:
     - sudo apt-get update
     - sudo apt-get install python-pip
 script:
-    - sudo pip install shipa-ci && shipa-ci --app=canary --server=$SHIPASERVER --email=$SHIPAEMAIL --password=$SHIPAPASSWORD --verbose --steps=3 --step-interval=1m --step-weight=20
+    - sudo pip install shipa-ci && shipa-ci --app=shipacanary --server=$SHIPASERVER --email=$SHIPAEMAIL --password=$SHIPAPASSWORD --verbose --steps=3 --step-interval=1m --step-weight=20
 env:
     global:
 notifications:
