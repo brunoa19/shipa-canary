@@ -16,5 +16,5 @@ func main() {
 }
 
 func hello(res http.ResponseWriter, req *http.Request) {
-    fmt.Fprintln(res, "Canary 2")
+    fmt.Fprintln(res, "Canary 1")
 }
