@@ -5,7 +5,8 @@ before_script:
     - sudo apt-get update
     - sudo apt-get install python-pip
 script:
-    - sudo pip install shipa-ci && shipa-ci --app=$APP --server=$SHIPASERVER --email=$SHIPAEMAIL --password=$SHIPAPASSWORD --verbose --steps=3 --step-interval=30s --step-weight=20
+    - sudo pip install shipa-ci
+    - shipa-ci --server=$SHIPASERVER --email=$SHIPAEMAIL --password=$SHIPAPASSWORD app deploy --app=$APP --steps=3 --step-interval=30s --step-weight=20
 env:
     global:
 notifications:
