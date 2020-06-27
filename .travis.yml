@@ -6,7 +6,7 @@ before_script:
     - sudo apt-get install python-pip
 script:
     - sudo pip install shipa-ci
-    - shipa-ci --server=http://34.105.83.78:8080 --email=bandrade@shipa.io --password=shipa2020 app deploy --app=canary --steps=3 --step-interval=30s --step-weight=20
+    - shipa-ci --server=$SHIPASERVER --email=$SHIPAEMAIL --password=$SHIPAPASSWORD app deploy --app=$APP --steps=3 --step-interval=30s --step-weight=20
 env:
     global:
 notifications:
